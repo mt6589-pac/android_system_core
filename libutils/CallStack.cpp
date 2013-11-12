@@ -114,12 +114,12 @@ void CallStack::log(const char* logtag, android_LogPriority priority, const char
     print(printer);
 }
 
-
 #ifdef MTK_MT6589
 void CallStack::update(int32_t ignoreDepth, int32_t maxDepth) {
     update(ignoreDepth, maxDepth, CURRENT_THREAD);
 }
 
+#ifdef MTK_MT6589
 void CallStack::dump(const char* prefix) const {
     backtrace_symbol_t symbols[mCount];
 
