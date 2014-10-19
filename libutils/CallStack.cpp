@@ -118,6 +118,7 @@ void CallStack::log(const char* logtag, android_LogPriority priority, const char
 void CallStack::update(int32_t ignoreDepth, int32_t maxDepth) {
     update(ignoreDepth, maxDepth, CURRENT_THREAD);
 }
+#endif
 
 #ifdef MTK_MT6589
 void CallStack::dump(const char* prefix) const {
